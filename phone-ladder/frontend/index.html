@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Phone Ladder - Intelligent Mobile AI Language Model Recommender</title>
+  <meta name="description" content="Recommends the best on-device AI language model for any smartphone based on RAM, storage, processor, and speed." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              violet: '#8b5cf6',
+              cyan: '#06b6d4',
+              emerald: '#10b981',
+              dark: '#07080d',
+              card: '#0f121d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/css/styles.css" />
+
+  <!-- React 18 & ReactDOM 18 UMD -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body class="bg-[#07080d] text-slate-100 min-h-screen antialiased">
+  <div id="root"></div>
+
+  <!-- Application Modules & Components in Dependency Order -->
+  <script src="/static/js/icons.js"></script>
+  <script src="/static/js/hardware_detector.js"></script>
+  <script src="/static/js/benchmark_engine.js"></script>
+  <script src="/static/js/components/Navbar.js"></script>
+  <script src="/static/js/components/Dashboard.js"></script>
+  <script src="/static/js/components/DeviceAnalyzer.js"></script>
+  <script src="/static/js/components/ModelExplorer.js"></script>
+  <script src="/static/js/components/ModelComparison.js"></script>
+  <script src="/static/js/components/BenchmarkLab.js"></script>
+  <script src="/static/js/components/RecommendationsView.js"></script>
+
+  <!-- Extra Advanced Features Components -->
+  <script src="/static/js/components/OneTapScanModal.js"></script>
+  <script src="/static/js/components/LiveMonitor.js"></script>
+  <script src="/static/js/components/OfflineModeView.js"></script>
+  <script src="/static/js/components/CommunityLeaderboard.js"></script>
+  <script src="/static/js/components/StorageManagerView.js"></script>
+  <script src="/static/js/components/QualityTestView.js"></script>
+  <script src="/static/js/components/PrivacyCenterView.js"></script>
+
+  <!-- Root Application -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

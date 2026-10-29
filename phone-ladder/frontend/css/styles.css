@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #07080d;
+  --bg-card: rgba(15, 18, 29, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-violet: rgba(139, 92, 246, 0.35);
+  --border-cyan: rgba(6, 182, 212, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #07080d;
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a12;
+}
+::-webkit-scrollbar-thumb {
+  background: #232742;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b426f;
+}
+
+/* Glassmorphism & Cyber effects */
+.glass-panel {
+  background: rgba(15, 18, 29, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-glow {
+  background: rgba(17, 21, 36, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 0 0 15px rgba(139, 92, 246, 0.12);
+}
+
+.glass-panel-cyan {
+  background: rgba(17, 21, 36, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.28);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 0 0 15px rgba(6, 182, 212, 0.12);
+}
+
+.glow-violet {
+  box-shadow: 0 0 20px -3px rgba(139, 92, 246, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px -3px rgba(6, 182, 212, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.35);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-violet {
+  background: linear-gradient(135deg, #c084fc 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pulse animation for live hardware badge */
+@keyframes pulse-live {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-pulse-live {
+  animation: pulse-live 2s infinite ease-in-out;
+}
+
+/* Ladder Tier Badge and Rung Glow */
+.ladder-rung-active {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.25) 0%, rgba(6, 182, 212, 0.25) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.6);
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
+}
+
+.ladder-rung-idle {
+  background: rgba(18, 22, 36, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Monospace fonts for numbers and code */
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: "tnum";
+}
+
+/* Range input slider styling */
+input[type=range] {
+  -webkit-appearance: none;
+  background: #1e2238;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #06b6d4;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.8);
+  transition: transform 0.15s ease;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Shimmer animation for benchmark runner */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-active {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.2) 25%, rgba(6, 182, 212, 0.4) 50%, rgba(139, 92, 246, 0.2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
